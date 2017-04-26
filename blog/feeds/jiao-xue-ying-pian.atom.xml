@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall CPA 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/jiao-xue-ying-pian.atom.xml" rel="self"></link><id>./</id><updated>2016-04-22T12:00:00+08:00</updated><entry><title>Ubuntu 16.04 環境下安裝並設定裝Stunnel 與 Fossil SCM</title><link href="./ubuntu-1604-huan-jing-xia-an-zhuang-bing-she-ding-zhuang-stunnel-yu-fossil-scm.html" rel="alternate"></link><published>2016-04-22T12:00:00+08:00</published><updated>2016-04-22T12:00:00+08:00</updated><author><name>蔡兵常</name></author><id>tag:,2016-04-22:./ubuntu-1604-huan-jing-xia-an-zhuang-bing-she-ding-zhuang-stunnel-yu-fossil-scm.html</id><summary type="html">&lt;p&gt;說明如何在 Ubuntu 操作系統中, 安裝並設定 Stunnel 與 Fossil SCM server &lt;/p&gt;
+
+
+&lt;p&gt;首先開始終端機並且輸入以下指&lt;/p&gt;
+&lt;p&gt;sudo apt update&lt;/p&gt;
+&lt;p&gt;sudo apt install stunnel4 -y&lt;/p&gt;
+&lt;p&gt;sudo apt install fossil&lt;/p&gt;
+&lt;p&gt;就能完成Stunnel 與 Fossil SCM 安裝
+PS:必須在網路連線下才能完成此安裝&lt;/p&gt;
+&lt;p&gt;環境變數與開機啟動設定:&lt;/p&gt;
+&lt;p&gt;於終端機中輸入指令並且於 vi模式下件修改與建立檔案&lt;/p&gt;
+&lt;p&gt;/etc/environment 設定:&lt;/p&gt;
+&lt;p&gt;輸入 sudo vi /etc/environment &lt;/p&gt;
+&lt;p&gt;新增此行 HTTPS=on&lt;/p&gt;
+&lt;p&gt;/etc/default/stunnel4 檔案設定:&lt;/p&gt;
+&lt;p&gt;輸入 sudo vi /etc/default/stunnel4&lt;/p&gt;
+&lt;p&gt;把 ENABLED=0 改成 1&lt;/p&gt;
+&lt;p&gt;Stunnel 設定並執行 fossil http 指令
+stunnel.conf&lt;/p&gt;
+&lt;p&gt;建立 localhost.key 與 localhost.crt:&lt;/p&gt;
+&lt;p&gt;輸入 sudo vi /etc/environment sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout localhost.key -out localhost.crt&lt;/p&gt;
+&lt;p&gt;/etc/stunnel/stunnel.conf 設定檔案, 可同時支援 IPv4 與 IPv6 協定:&lt;/p&gt;
+&lt;p&gt;輸入sudo vi /etc/stunnel/stunnel.conf&lt;/p&gt;
+&lt;p&gt;並且新增以下設定&lt;/p&gt;
+&lt;p&gt;[https]&lt;/p&gt;
+&lt;p&gt;accept = your_IPv4_ip:443&lt;/p&gt;
+&lt;p&gt;accept = :::443&lt;/p&gt;
+&lt;p&gt;cert = /etc/stunnel/localhost.crt&lt;/p&gt;
+&lt;p&gt;key = /etc/stunnel/localhost.key&lt;/p&gt;
+&lt;p&gt;exec = /usr/bin/fossil&lt;/p&gt;
+&lt;p&gt;execargs = /usr/bin/fossil http /home/user/repository/mde2a1.fossil -- https --nojail&lt;/p&gt;
+&lt;p&gt;完成以上步驟就成功完成 安裝及設定&lt;/p&gt;
+&lt;p&gt;實際操作影片:&lt;/p&gt;
+&lt;iframe src="https://player.vimeo.com/video/214832102" width="640" height="372" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;a href="https://vimeo.com/214832102"&gt;Stunnel 與 Fossil SCM server  安裝與設定&lt;/a&gt; from &lt;a href="https://vimeo.com/user58912621"&gt;黃胤瑋&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;/section&gt;</summary><category term="網路設定"></category></entry><entry><title>VirtualBox安裝並安裝Ubuntu於VirtualBox</title><link href="./virtualboxan-zhuang-bing-an-zhuang-ubuntuyu-virtualbox.html" rel="alternate"></link><published>2016-04-21T12:00:00+08:00</published><updated>2016-04-21T12:00:00+08:00</updated><author><name>蔡兵常</name></author><id>tag:,2016-04-21:./virtualboxan-zhuang-bing-an-zhuang-ubuntuyu-virtualbox.html</id><summary type="html">&lt;p&gt;VirtualBox安裝並且安裝Ubuntu於VirtualBox
+ &lt;iframe src="https://player.vimeo.com/video/214116206" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href="https://vimeo.com/214116206"&gt;VirtualBox安裝並且安裝Ubuntu於VirtualBox&lt;/a&gt; from &lt;a href="https://vimeo.com/user58912621"&gt;黃胤瑋&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+&lt;/section&gt;&lt;/p&gt;</summary><category term="網路設定"></category></entry><entry><title>何謂機械設計</title><link href="./he-wei-ji-jie-she-ji.html" rel="alternate"></link><published>2016-04-07T12:00:00+08:00</published><updated>2016-04-07T12:00:00+08:00</updated><author><name>蔡兵常</name></author><id>tag:,2016-04-07:./he-wei-ji-jie-she-ji.html</id><summary type="html">&lt;p&gt;設計是一種表達，產生內容可去做機密配置 表達方式，口語、文字、2D、理論、實體、軟體。 機：很多元件組成可達成精巧配置&lt;/p&gt;
+&lt;p&gt;械：控制在一個範圍有固定功能&lt;/p&gt;
+&lt;p&gt;設：必須明確表達結果之具體規劃&lt;/p&gt;
+&lt;p&gt;計：經過詳細思慮考量過程&lt;/p&gt;
+&lt;p&gt;利用虛實整合的機械設計工程師&lt;/p&gt;</summary><category term="網路設定"></category></entry><entry><title>如何設定ipv6網路</title><link href="./ru-he-she-ding-ipv6wang-lu.html" rel="alternate"></link><published>2016-04-07T12:00:00+08:00</published><updated>2016-04-07T12:00:00+08:00</updated><author><name>蔡兵常</name></author><id>tag:,2016-04-07:./ru-he-she-ding-ipv6wang-lu.html</id><summary type="html">&lt;p&gt;連線到IPV6 的網路設定教學&lt;/p&gt;
+&lt;p&gt;連線到IPV6 的網路設定教學&lt;/p&gt;
+&lt;p&gt;首先進入網路和共用中心&lt;/p&gt;
+&lt;p&gt;選擇乙太網路內容&lt;/p&gt;
+&lt;p&gt;把IPV4打勾按掉 選擇IPV6 然後打勾IPV6 點選內容&lt;/p&gt;
+&lt;p&gt;把使用下列DNS伺服器網址打勾&lt;/p&gt;
+&lt;p&gt;慣用DNS伺服器:輸入學校的IPV6 IP&lt;/p&gt;
+&lt;p&gt;其他DNS伺服器:中華電信的IPV6 IP&lt;/p&gt;
+&lt;p&gt;設定完後 進入網際網路的設定&lt;/p&gt;
+&lt;p&gt;點開 Proxy 設定&lt;/p&gt;
+&lt;p&gt;點選LAN設定&lt;/p&gt;
+&lt;p&gt;把Proxy伺服器打勾網址用系館的IPV6 連接阜打3128&lt;/p&gt;
+&lt;p&gt;就能完成IPV6的連線&lt;/p&gt;</summary><category term="網路設定"></category></entry><entry><title>製作網路線</title><link href="./zhi-zuo-wang-lu-xian.html" rel="alternate"></link><published>2016-04-07T12:00:00+08:00</published><updated>2016-04-07T12:00:00+08:00</updated><author><name>蔡兵常</name></author><id>tag:,2016-04-07:./zhi-zuo-wang-lu-xian.html</id><summary type="html">&lt;p&gt;首先準備好材料: 
+    8蕊網路線
+    RJ-45接頭
+    剪刀
+    壓線鉗&lt;/p&gt;
+&lt;p&gt;接下來就開始製作
+把網路線的外層塑膠殼剪開 裡面會有8條有顏色的線 將他們整理好並且剪到一樣長&lt;/p&gt;
+&lt;p&gt;網路線有2種接法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;一般傳輸用網路線色對規則 (兩端的網路頭皆為以下接法)
+白橙、橙、白綠、藍、白藍、綠、白棕、棕&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;兩台電腦資料對傳用色對規則 (又稱跳接法、一頭以正常傳輸色對接法、另一頭則為以下接法)
+白綠、綠、白橙、藍、白藍、橙、白棕、棕&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;先用壓線鉗把外套拆掉.再把裡面4對線分別分開
+把8條線按照(白橘.橘.白綠.藍.白藍.綠.白棕.棕)
+用整齊再對齊.套入接頭用力壓到底
+再用壓線鉗壓緊.大功告成&lt;/p&gt;
+&lt;p&gt;完成以上步驟後就能完成網路線製作&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://imgur.com/rkQt3nG"&gt;&lt;img src="http://i.imgur.com/rkQt3nG.jpg" title="source: imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;</summary><category term="網路設定"></category></entry></feed>
