@@ -36,9 +36,18 @@ execargs = /usr/bin/fossil http /home/user/repository/自己的小組.fossil -- 
 &lt;p&gt;也可以觀看練習影片：&lt;/p&gt;
 &lt;iframe src="https://player.vimeo.com/video/215027413" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;p&gt;&lt;a href="https://vimeo.com/215027413"&gt;在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM&lt;/a&gt; from &lt;a href="https://vimeo.com/user65910729"&gt;蔡兵常&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</summary><category term="網路設定"></category></entry><entry><title>VirtualBox安裝並安裝Ubuntu於VirtualBox</title><link href="./virtualboxan-zhuang-bing-an-zhuang-ubuntuyu-virtualbox.html" rel="alternate"></link><published>2016-04-21T12:00:00+08:00</published><updated>2016-04-21T12:00:00+08:00</updated><author><name>蔡兵常</name></author><id>tag:,2016-04-21:./virtualboxan-zhuang-bing-an-zhuang-ubuntuyu-virtualbox.html</id><summary type="html">&lt;p&gt;VirtualBox安裝並且安裝Ubuntu於VirtualBox
+&lt;p&gt;&lt;a href="https://vimeo.com/215027413"&gt;在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM&lt;/a&gt; from &lt;a href="https://vimeo.com/user65910729"&gt;蔡兵常&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;</summary><category term="網路設定"></category></entry><entry><title>VirtualBox安裝並安裝Ubuntu於VirtualBox</title><link href="./virtualboxan-zhuang-bing-an-zhuang-ubuntuyu-virtualbox.html" rel="alternate"></link><published>2016-04-21T12:00:00+08:00</published><updated>2016-04-21T12:00:00+08:00</updated><author><name>蔡兵常</name></author><id>tag:,2016-04-21:./virtualboxan-zhuang-bing-an-zhuang-ubuntuyu-virtualbox.html</id><summary type="html">&lt;p&gt;1.自訂系統名稱&lt;/p&gt;
+&lt;p&gt;2.類型選擇Linux&lt;/p&gt;
+&lt;p&gt;3.版本選擇Ubuntu64-bit&lt;/p&gt;
+&lt;p&gt;4.記憶體大小設定(依照本機來判斷給予多少記憶體)&lt;/p&gt;
+&lt;p&gt;5.硬碟選擇立即建立虛擬硬碟&lt;/p&gt;
+&lt;p&gt;6.設定虛擬機要存放的位置、給予虛擬硬碟多少容量(建議10GB以上)&lt;/p&gt;
+&lt;p&gt;7.硬碟類型選擇VHD(虛擬硬碟)，設定好之後即可建立一個虛擬主機(或稱虛擬電腦)。&lt;/p&gt;
+&lt;p&gt;在建立完成後，需要設定之後內部要使用的網路，不然就沒有網路啦！ 點選左上角的設定值→網路，附加選擇的是橋接介面卡，而MAC位址需判斷自身網路狀況輸入，因為我用的是學校宿舍網路，打上網路的實體位址。完成後點下OK鈕。&lt;/p&gt;
+&lt;p&gt;接下來就可以按下啟動鍵了！啟動後虛擬機會顯示選取啟動的磁碟，這時候拿出一開始準備的Ubuntu，瀏覽選擇後按下啟動，就能在使用Ubuntu的系統下開啟VirtualBox虛擬主機。 接著在設定密碼及安裝一些軟件後，就已經成功安裝完成。&lt;/p&gt;
+&lt;p&gt;VirtualBox安裝並且安裝Ubuntu於VirtualBox
  &lt;iframe src="https://player.vimeo.com/video/214116206" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-&lt;p&gt;&lt;a href="https://vimeo.com/214116206"&gt;VirtualBox安裝並且安裝Ubuntu於VirtualBox&lt;/a&gt; from &lt;a href="https://vimeo.com/user58912621"&gt;黃胤瑋&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+ &lt;p&gt;&lt;a href="https://vimeo.com/214116206"&gt;VirtualBox安裝並且安裝Ubuntu於VirtualBox&lt;/a&gt; from &lt;a href="https://vimeo.com/user58912621"&gt;黃胤瑋&lt;/a&gt; on &lt;a href="https://vimeo.com"&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
 &lt;/section&gt;&lt;/p&gt;</summary><category term="網路設定"></category></entry><entry><title>何謂機械設計</title><link href="./he-wei-ji-jie-she-ji.html" rel="alternate"></link><published>2016-04-07T12:00:00+08:00</published><updated>2016-04-07T12:00:00+08:00</updated><author><name>蔡兵常</name></author><id>tag:,2016-04-07:./he-wei-ji-jie-she-ji.html</id><summary type="html">&lt;p&gt;設計是一種表達，產生內容可去做機密配置 表達方式，口語、文字、2D、理論、實體、軟體。 機：很多元件組成可達成精巧配置&lt;/p&gt;
 &lt;p&gt;械：控制在一個範圍有固定功能&lt;/p&gt;
 &lt;p&gt;設：必須明確表達結果之具體規劃&lt;/p&gt;
