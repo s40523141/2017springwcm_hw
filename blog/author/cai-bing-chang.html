@@ -279,8 +279,20 @@ init_mathjax();
 
             <article>
                 <h2><a href="../ubuntu-1604-huan-jing-xia-an-zhuang-bing-she-ding-zhuang-stunnel-yu-fossil-scm.html">Ubuntu 16.04 環境下安裝並設定裝Stunnel 與 Fossil SCM</a></h2>
-                <div class="summary"><p>說明如何在 Ubuntu 操作系統中, 安裝並設定 Stunnel 與 Fossil SCM server </p>
-
+                <div class="summary"><p>練習如何在 Ubuntu 操作系統中, 安裝並設定 Stunnel 後與 Fossil SCM server 結合啟動。</p>
+<p>首先，開啟終端機(terminal)。</p>
+<p>開始安裝Stunnel 與 Fossil SCM：</p>
+<p>sudo apt update</p>
+<p>sudo apt install stunnel4 -y</p>
+<p>sudo apt install fossil</p>
+<p>輸入完畢後，接下來需要更改某些資料夾目錄中的環境變數及做開機啟動設定。</p>
+<p>sudo vi /etc/environment</p>
+<p>其中vi代表進入目錄並更改或設定其內容。</p>
+<p>進入後按下o，即進入編寫模式及換到下一行，輸入：</p>
+<p>HTTPS=on</p>
+<p>接著按下esc鍵，輸入:wq，其中w代表編寫(write)、
+q代表離開(quit)。</p>
+<p>sudo vi ...</p>
                     <a class="btn btn-default btn-xs" href="../ubuntu-1604-huan-jing-xia-an-zhuang-bing-she-ding-zhuang-stunnel-yu-fossil-scm.html">more ...</a>
                 </div>
             </article>
