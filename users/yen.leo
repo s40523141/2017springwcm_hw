@@ -258,7 +258,7 @@ vertical: body pane on the botton</t>
 <t tx="yen.20170108171733.10">&lt;head&gt;
     &lt;meta charset="utf-8"&gt;
 &lt;title&gt;
-2017 Spring 機械設計工程系網際內容管理
+蔡兵常的計算機程式課程
 &lt;/title&gt;
     &lt;meta name="description" content="A framework for easily creating beautiful presentations using HTML"&gt;
     &lt;meta name="author" content="Hakim El Hattab"&gt;
@@ -337,10 +337,9 @@ vertical: body pane on the botton</t>
 
 						
 </t>
-<t tx="yen.20170108171733.15">## 2017Spring 網際內容管理課程
+<t tx="yen.20170108171733.15">## 兵常的計算機程式課程
 
-### 虎科大機械設計工程系
-
+### 四設一甲 40523141
 &lt;small&gt;
 Created by [s40523141](https://github.com/s40523141)
 &lt;/small&gt;
