@@ -39,10 +39,10 @@
 <v t="yen.20170108171733.17"><vh>投影片快捷鍵</vh></v>
 </v>
 </v>
-<v t="leo.20170623042419.1"><vh>VirtualBox安裝並且安裝Ubuntu於VirtualBox</vh>
+<v t="leo.20170623042419.1" a="E"><vh>VirtualBox安裝並且安裝Ubuntu於VirtualBox</vh>
 <v t="leo.20170623042439.1"><vh>VirtualBox安裝並且安裝Ubuntu於VirtualBox影片</vh></v>
 </v>
-<v t="leo.20170623042544.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM</vh>
+<v t="leo.20170623042544.1" a="E"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM</vh>
 <v t="leo.20170623042550.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM影片</vh></v>
 </v>
 <v t="leo.20170623030855.1"><vh>網際內容管理</vh>
@@ -186,7 +186,9 @@
 
 						
 </t>
-<t tx="leo.20170623042439.1">&lt;iframe src="https://player.vimeo.com/video/215032549" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20170623042439.1"># VirtualBox安裝並且安裝Ubuntu於VirtualBox
+
+&lt;iframe src="https://player.vimeo.com/video/215032549" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20170623042544.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -196,7 +198,9 @@
 
 						
 </t>
-<t tx="leo.20170623042550.1">&lt;iframe src="https://player.vimeo.com/video/215027413" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20170623042550.1"># 在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM
+
+&lt;iframe src="https://player.vimeo.com/video/215027413" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
