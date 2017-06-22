@@ -70,16 +70,101 @@ Created by [40523141](http://s40523141.github.io/kmolab/blog/)
 
 
 						
-<section>
 <section data-markdown>
     <script type="text/template">
-# 計算機程式在教什麼?
+# 如何設定ipv6網路
 
-## 創造力
-## 表達力
-以及
-## 協同力
+<small>
+* 連線到IPV6 的網路設定教學
+* 連線到IPV6 的網路設定教學
+* 首先進入網路和共用中心
+* 選擇乙太網路內容
+* 把IPV4打勾按掉 選擇IPV6 然後打勾IPV6 點選內容
+* 把使用下列DNS伺服器網址打勾
+* 慣用DNS伺服器:輸入學校的IPV6 IP
+* 其他DNS伺服器:中華電信的IPV6 IP
+* 設定完後 進入網際網路的設定
+* 點開 Proxy 設定
+* 點選LAN設定
+* 把Proxy伺服器打勾網址用系館的IPV6 連接阜打3128
+* 就能完成IPV6的連線
+</small>
+    </script>
+</section>
 
+
+		
+<section data-markdown>
+    <script type="text/template">
+# 製作網路線
+
+<small>
+* 首先準備好材料: 8蕊網路線 RJ-45接頭 剪刀 壓線鉗
+* 接下來就開始製作 把網路線的外層塑膠殼剪開 裡面會有8條有顏色的線 將他們整理好並且剪到一樣長
+* 網路線有2種接法
+* 一般傳輸用網路線色對規則 (兩端的網路頭皆為以下接法) 白橙、橙、白綠、藍、白藍、綠、白棕、棕
+* 兩台電腦資料對傳用色對規則 (又稱跳接法、一頭以正常傳輸色對接法、另一頭則為以下接法) 白綠、綠、白橙、藍、白藍、橙、白棕、棕
+* 先用壓線鉗把外套拆掉.再把裡面4對線分別分開 把8條線按照(白橘.橘.白綠.藍.白藍.綠.白棕.棕) 用整齊再對齊.套入接頭用力壓到底 再用壓線鉗壓緊.大功告成
+* 完成以上步驟後就能完成網路線製作
+</small>
+    </script>
+</section>
+
+
+		
+<section data-markdown>
+    <script type="text/template">
+# VirtualBox安裝並安裝Ubuntu於VirtualBox
+
+<small>
+* 自訂系統名稱
+* 類型選擇Linux
+* 版本選擇Ubuntu64-bit
+* 記憶體大小設定(依照本機來判斷給予多少記憶體)
+* 硬碟選擇立即建立虛擬硬碟
+* 設定虛擬機要存放的位置、給予虛擬硬碟多少容量(建議10GB以上)
+* 硬碟類型選擇VHD(虛擬硬碟)，設定好之後即可建立一個虛擬主機(或稱虛擬電腦)。
+* 在建立完成後，需要設定之後內部要使用的網路，不然就沒有網路啦！ 點選左上角的設定值→網路，附加選擇的是橋接介面卡，而MAC位址需判斷自身網路狀況輸入，因為我用的是學校宿舍網路，打上網路的實體位址。完成後點下OK鈕。
+* 接下來就可以按下啟動鍵了！啟動後虛擬機會顯示選取啟動的磁碟，這時候拿出一開始準備的Ubuntu，瀏覽選擇後按下啟動，就能在使用Ubuntu的系統下開啟VirtualBox虛擬主機。 接著在設定密碼及安裝一些軟件後，就已經成功安裝完成。
+</small>
+    </script>
+</section>
+
+
+		
+<section data-markdown>
+    <script type="text/template">
+# Ubuntu 16.04 環境下安裝並設定裝Stunnel 與 Fossil SCM
+
+<small>
+* 練習如何在 Ubuntu 操作系統中, 安裝並設定 Stunnel 後與 Fossil SCM server 結合啟動。
+* 首先，開啟終端機(terminal)。
+* 開始安裝Stunnel 與 Fossil SCM：
+* sudo apt update
+* sudo apt install stunnel4 -y
+* sudo apt install fossil
+* 輸入完畢後，接下來需要更改某些資料夾目錄中的環境變數及做開機啟動設定。
+* sudo vi /etc/environment
+* 其中vi代表進入目錄並更改或設定其內容。
+* 進入後按下o，即進入編寫模式及換到下一行，輸入：
+* HTTPS=on
+* 接著按下esc鍵，輸入:wq，其中w代表編寫(write)、 q代表離開(quit)。
+* sudo vi /etc/default/stunnel4
+* 進入後將ENABLED=0中的"0"改為"1"。
+* 到這裡即完成環境變數以及開機啟動設定。
+* 最後我們要設定Stunnel 並執行 fossil http 指令，然後在特定目錄中建立兩個檔案。
+* 分別是localhost.key 與 localhost.crt
+* 首先，更換目錄：
+* cd /etc/stunnel/
+* 進入目錄後，即可編輯並建立這兩個我們所需的檔案：
+* ls -s
+* sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout localhost.key -out localhost.crt
+* sudo vi /etc/stunnel/stunnel.conf
+* 進入後，將下列資料輸入：
+* [https] accept = 此電腦的IPv4ip:443 accept = :::443(此為IPv6，若無需使用可直接跳過不打) cert = /etc/stunnel/localhost.crt key = /etc/stunnel/localhost.key exec = /usr/bin/fossil execargs = /usr/bin/fossil http /home/user/repository/自己的小組.fossil -- https --nojail
+* 其中 --nojail 目的在 drop the root privilege but do not enter the chroot jail
+* 最後輸入sudo /etc/init.d/stunnel4 restart後，重新開機虛擬機即 可以https: //yourip 連結至 mde2a1.fossil 網際管理介面！
+</small>
     </script>
 </section>
 
@@ -87,397 +172,21 @@ Created by [40523141](http://s40523141.github.io/kmolab/blog/)
 						
 <section data-markdown>
     <script type="text/template">
-# 計算機程式在教什麼?
+# 何謂機械設計
 
-## <span style="color:#FFFF00">創造力</span><small>=自學力+程式力+想像力</small>
-## <span style="color:#FFFF00">表達力</span><small>=口語+文字+2D+3D+理論+實體</small>
-<span style="color:#00FF80">以及</span>
-## <span style="color:#FFFF00">協同力</span><small>=電腦+網路+工具+專案</small>
-
+<small>
+設計是一種表達，產生內容可去做機密配置 表達方式，口語、文字、2D、理論、實體、軟體。
+</small>
+* 機：很多元件組成可達成精巧配置
+* 械：控制在一個範圍有固定功能
+* 設：必須明確表達結果之具體規劃
+* 計：經過詳細思慮考量過程
+* 利用虛實整合的機械設計工程師
     </script>
 </section>
 
 
-						
-<section data-markdown>
-    <script type="text/template">
-# 計算機程式系列課程
-
-## 網際內容管理
-## 電腦輔助設計實習
-<span style="color:#00FF80">還有</span>
-## 協同產品設計實習
-也在研習<span style="color:#FFFF00">創造力</span>、<span style="color:#FFFF00">表達力</span>與<span style="color:#FFFF00">協同力</span>
-
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 何謂創造力?
-
-## 能夠<small><span style="color:#FF0080">持續</span></small><span style="color:#FFFF00">自學</span>
-## 會安排<small><span style="color:#FF0080">高效</span></small><span style="color:#FFFF00">可執行</span>流程
-<span style="color:#00FF80">還有</span>
-## 俱備<small><span style="color:#FF0080">豐富</span></small><span style="color:#FFFF00">想像力</span>
-
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 何謂創造力?
-
-## 能夠<small><span style="color:#FF0080">持續</span></small>自學-><span style="color:#FFFF00">不一定都要別人教</span>
-## 會安排<small><span style="color:#FF0080">高效</span></small>可執行流程->展現<span style="color:#FFFF00">執行力</span>
-<span style="color:#00FF80">還有</span>
-## 俱備<small><span style="color:#FF0080">豐富</span></small>想像力->不受限, <span style="color:#FFFF00">積極進行改造</span>
-
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 自學的訓練
-
-## 學員必須自己有學習動機
-## 能消化中英文資料
-## 從中體會學習的意義
-
-
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 高效執行力
-
-## 用對的方法
-## 在對的時機
-## 找對的人
-## 作對的事
-
-
-    </script>
-</section>
-
-
-						
-</section>
-<section>
-<section data-markdown>
-    <script type="text/template">
-# 計算機程式課程規劃
-
-## [課程規劃](https://github.com/mdecourse/2016fallcp/blob/master/syllabus.py)
-## [課程 Wiki](https://github.com/mdecourse/2016fallcp/wiki)
-## [課程網誌](http://chiamingyen.github.io/kmolab/blog/tag/2016fallcp.html)
-
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-## 下載 miniconda 可攜環境
-
-  * 在電腦教室下載 [mini2016fall.7z](http://140.130.17.17/public/2016fall/mini2016fall_with_leo.7z)
-  * 從外部下載 [mini2016fall.7z](https://140.130.17.101/download/?filepath=/home/yen/cmsimply/wsgi/local_data/downloads/mini2016fall_with_leo.7z)
-  * start.bat 啟動, stop.bat 關閉
-  * 建議存在隨身硬碟中使用
-
-
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-## 學員自評項目
-
-* 上課筆記與心得寫在個人的 2016fallcp_hw 倉儲 Wiki 中
-* 利用 [ShareX](https://getsharex.com/) 錄製上課操作練習影片
-* 將影片加上說明字幕後, 上傳至個人 [Vimeo](https://vimeo.com/) 與 [Youtube](https://www.youtube.com)
-* 每週更新個人與分組的 Github Pages 投影片與網誌
-    </script>
-</section>
-
-
-						
-</section>
-<section>
-<section data-markdown>
-    <script type="text/template">
-# 自學 Python3
-
-[Python3 程式範例](https://github.com/mdecourse/2016fallcp/blob/master/python3program.py)
-### 在哪裡執行?
-### 如何執行?
-### 如何寫心得?
-### 如何錄製操作過程?
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 在哪裡執行?
-
-### 單機操作系統中 (近端)
-### 單機連結到遠端主機中 (遠端)
-### 瀏覽器中 (網際端)
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# Python 解譯器
-
-CPython: https://www.python.org/
-
-(Anaconda: https://www.continuum.io/downloads)
-    
-IronPython (.NET): http://ironpython.net/
-
-Jython (Java): http://www.jython.org/
-
-Pypy (Python): http://pypy.org/
-
-Brython (Javascript): https://www.brython.info/
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# Python 2 或 3?
-
-### 業界大部份仍以 2.7 版為主
-但是, 若沒有特別約束
-### 建議直接學習 Python3
-    </script>
-</section>
-
-
-						
-</section>
-<section>
-<section data-markdown>
-    <script type="text/template">
-# 計算機程式專題
-
-* 如何進行上課分組與排座位?
-* 如何寫一個猜數字遊戲?
-* 如何繪製 2D 靜態圖?
-* 如何製作一個簡單的網際遊戲?
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 課程分組排座位
-
-* 想像一下分組流程
-* 請畫出流程圖
-* 如何進行最好?
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 猜數字遊戲
-
-* 單機執行還是瀏覽器執行?
-* 請畫出流程圖
-* 有沒有參考資料?
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 2D 繪圖
-
-* 單機執行還是瀏覽器執行?
-* 請畫出流程圖
-* 有沒有參考資料?
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 網際遊戲
-
-* 單機執行還是瀏覽器執行?
-* 請畫出流程圖
-* 有沒有參考資料?
-    </script>
-</section>
-
-
-						
-</section>
-<section>
-<section data-markdown>
-    <script type="text/template">
-# Github 倉儲網頁
-
-####建立個人 Github 網頁 (帳號.github.io)
-####建立個人課程作業網頁 (納入投影片與網誌架構)
-####組長建立分組的評量網頁 (納入投影片與網誌架構)
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 學員作業網頁定版
-
-###個人作業網頁內容可以隨時改版
-###分組評量網頁必須在指定時間前定版
-###Github 倉儲 gh-pages分支與子模組應用
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# Github 倉儲拉回請求
-
-####分組倉儲 Collaborators 設定
-####分組倉儲版本 Pull Requests 練習
-####各組員實際操作影片錄製
-####操作影片加字幕以及影片檔相加
-    </script>
-</section>
-
-
-						
-</section>
-<section>
-<section data-markdown>
-    <script type="text/template">
-# Python3 語法
-
-####print()
-####input()
-####變數名稱與關鍵字
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# for 迴圈用法
-
-###Python 程式縮排
-###for i in range(5)：
-###數列與 iterator
-
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 函式用法
-
-####函式定義
-####函式呼叫與傳值
-####函式載入順序
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 數列用法
-
-####數列與索引
-####數列與字串
-####數列排序
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 分組程式內容
-
-####讀取原始資料內容
-####設法分割資料, 納入數列
-####根據設計邏輯進行資料處理
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 遊戲邏輯
-
-####1-100 中隨機取一個數字作為答案
-####設法讓使用者猜這個數字 (接受輸入)
-####使用每猜一次都回答比答案大或小
-####能在一定次數中猜對者獲勝
-####在單機或網際執行程式?
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# Python 網際繪圖
-
-####Brython 簡介
-####Brython 執行設定
-####基本繪圖練習 (五芒星、正齒輪與各國國旗)
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 網際動畫範例
-
-####機構模擬
-####猜顏色遊戲
-####網際對戰遊戲
-    </script>
-</section>
-
-
-						
-</section>
+		
 <section>
 <section data-markdown>
     <script type="text/template">
