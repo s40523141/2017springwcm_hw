@@ -626,7 +626,7 @@ document['ch01'].bind('click',get_input)
 * 進入後，將下列資料輸入：
 * [https] accept = 此電腦的IPv4ip:443 accept = :::443(此為IPv6，若無需使用可直接跳過不打) cert = /etc/stunnel/localhost.crt key = /etc/stunnel/localhost.key exec = /usr/bin/fossil execargs = /usr/bin/fossil http /home/user/repository/自己的小組.fossil -- https --nojail
 * 其中 --nojail 目的在 drop the root privilege but do not enter the chroot jail
-* 最後輸入sudo /etc/init.d/stunnel4 restart後，重新開機虛擬機即可以https: //yourip 連結至 mde2a1.fossil 網際管理介面！
+* 最後輸入sudo /etc/init.d/stunnel4 restart後，重新開機虛擬機即 可以https: //yourip 連結至 mde2a1.fossil 網際管理介面！
 &lt;/small&gt;</t>
 <t tx="leo.20170622231501.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
