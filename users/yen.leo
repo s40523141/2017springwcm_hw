@@ -36,34 +36,23 @@
 <v t="yen.20170108171733.14" a="E"><vh>封面投影片</vh>
 <v t="yen.20170108171733.15"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20170623030855.1" a="E"><vh>網際內容管理</vh>
-<v t="leo.20170623030908.1"><vh>網際內容管理</vh></v>
-</v>
-<v t="leo.20170623031250.1" a="E"><vh>網路線製作</vh>
-<v t="leo.20170623031251.1"><vh>網路線製作</vh></v>
-</v>
-<v t="leo.20170623032306.1" a="E"><vh>建立實體主機</vh>
-<v t="leo.20170623032349.1"><vh>建立實體主機</vh></v>
-</v>
-<v t="leo.20170623031931.1" a="E"><vh>如何設定ipv6網路</vh>
-<v t="leo.20170623032011.1"><vh>如何設定ipv6網路</vh></v>
-</v>
-<v t="leo.20170623032652.1" a="E"><vh>心得</vh>
-<v t="leo.20170623032700.1"><vh>心得</vh></v>
-</v>
-<v t="yen.20170108171733.16"><vh>快捷鍵</vh>
+<v t="yen.20170108171733.16" a="E"><vh>快捷鍵</vh>
 <v t="yen.20170108171733.17"><vh>投影片快捷鍵</vh></v>
 </v>
-<v t="yen.20170108171733.64"><vh>各式內容引用範例</vh>
-<v t="yen.20170108171733.65" a="E"><vh>導入數學符號與方程式</vh>
-<v t="yen.20170108171733.66"><vh>LaTeX 格式方程式</vh></v>
+<v t="leo.20170623030855.1" a="E"><vh>網際內容管理</vh>
+<v t="leo.20170623030908.1"><vh>網際內容管理內文</vh></v>
 </v>
-<v t="yen.20170108171733.67" a="E"><vh>導入縮排程式碼</vh>
-<v t="yen.20170108171733.68"><vh>引用程式碼</vh></v>
+<v t="leo.20170623031250.1" a="E"><vh>網路線製作</vh>
+<v t="leo.20170623031251.1"><vh>網路線製作內文</vh></v>
 </v>
-<v t="yen.20170108171733.69" a="E"><vh>導入影片</vh>
-<v t="yen.20170108171733.70"><vh>iframe 導入影片</vh></v>
+<v t="leo.20170623032306.1" a="E"><vh>建立實體主機</vh>
+<v t="leo.20170623032349.1"><vh>建立實體主機內文</vh></v>
 </v>
+<v t="leo.20170623031931.1" a="E"><vh>如何設定ipv6網路</vh>
+<v t="leo.20170623032011.1"><vh>如何設定ipv6網路內文</vh></v>
+</v>
+<v t="leo.20170623032652.1" a="E"><vh>心得</vh>
+<v t="leo.20170623032700.1"><vh>心得內文</vh></v>
 </v>
 </v>
 </v>
@@ -103,10 +92,10 @@
 </t>
 <t tx="leo.20170623030908.1"># 網際內容管理
 
-&lt;small&gt;
+
 * 網際內容管理課程利用 Brython 建立一個能夠直接在瀏覽器中執行的 Python3 程式環境,
-* 讓使用者進行各種與機械產品開發相關的設計運算與動靜態模擬.
-&lt;/small&gt;</t>
+* 讓使用者進行各種與機械產品開發相關的設計運算與動靜態模擬
+</t>
 <t tx="leo.20170623031250.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -118,13 +107,13 @@
 </t>
 <t tx="leo.20170623031251.1"># 網路線製作
 
-&lt;small&gt;
+
 * 材料: 8蕊網路線 RJ-45接頭 剪刀 壓線鉗
 * 把網路線的外層塑膠殼剪開 裡面會有8條有顏色的線 將他們整理好並且剪到一樣長
 * 網路線有2種接法
 * 一般傳輸用網路線色對規則 (兩端的網路頭皆為以下接法) 白橙、橙、白綠、藍、白藍、綠、白棕、棕
 * 兩台電腦資料對傳用色對規則 (又稱跳接法、一頭以正常傳輸色對接法、另一頭則為以下接法) 白綠、綠、白橙、藍、白藍、橙、白棕、棕
-&lt;/small&gt;</t>
+</t>
 <t tx="leo.20170623031931.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -136,7 +125,7 @@
 </t>
 <t tx="leo.20170623032011.1"># 如何設定ipv6網路
 
-&lt;small&gt;
+
 * 連線到IPV6 的網路設定教學
 * 連線到IPV6 的網路設定教學
 * 首先進入網路和共用中心
@@ -150,7 +139,7 @@
 * 點選LAN設定
 * 把Proxy伺服器打勾網址用系館的IPV6 連接阜打3128
 * 就能完成IPV6的連線
-&lt;/small&gt;</t>
+</t>
 <t tx="leo.20170623032306.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -175,13 +164,13 @@
 </t>
 <t tx="leo.20170623032700.1"># 心得
 
-&lt;small&gt;
+
 * VirtualBox安裝並且安裝Ubuntu於VirtualBox
 *網路線製作
 * v i 指令說明
 * Ubuntu 16.04 環境下安裝並設定裝Stunnel 與 Fossil SCM
 * 雖然沒有順利照著上課進度發展，但也學到了有關上述的知識，就由更正錯誤來更加了解整個系統的運作方式。
-&lt;/small&gt;</t>
+</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
@@ -353,7 +342,7 @@ vertical: body pane on the botton</t>
 ### 虎科大機械設計工程系
 
 &lt;small&gt;
-Created by [KMOLab](http://chiamingyen.github.io/kmolab/blog/)
+Created by [s40523141](https://github.com/s40523141)
 &lt;/small&gt;
 
 [網際內容管理課程網誌](blog/index.html)
@@ -388,81 +377,6 @@ g.es("admin pelican 近端執行完畢")
 
 </t>
 <t tx="yen.20170108171733.5"></t>
-<t tx="yen.20170108171733.64">&lt;section&gt;
-@others
-&lt;/section&gt;</t>
-<t tx="yen.20170108171733.65">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
-</t>
-<t tx="yen.20170108171733.66"># 數學符號與方程式
-
-Inline math equations go in like so: $\omega = d\phi / dt$. Display
-math should get its own line and be put in in double-dollarsigns:
-
-$$I = \int \rho R^{2} dV$$
-</t>
-<t tx="yen.20170108171733.67">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-&lt;!-- 請注意, @others 不可以內縮 --&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-
-						
-</t>
-<t tx="yen.20170108171733.68">## 利用 Markdown 寫投影片
-以下利用 Markdown 格式展示 Python 程式碼:
-```
-@language python
-# use threading and subprocess to threading the make process
-import os
-import subprocess
-import threading
-
-def domake():
-    
-    path = "../exposed/api/exposed"
-    ubuntu = "../Ubuntu"
-    
-    # create obj path
-    
-    if not os.path.exists(path+"/../obj"):
-        os.makedirs(path+"/../obj")
-    
-    subprocess.call(["make", "clean"], cwd=path)
-    subprocess.call("make", cwd=path)
-    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
-    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
-    
-make = threading.Thread(target=domake)
-make.start()
-```
-</t>
-<t tx="yen.20170108171733.69">&lt;section data-markdown&gt;
-    &lt;script type="text/template"&gt;
-@others
-    &lt;/script&gt;
-&lt;/section&gt;
-
-
-						
-</t>
-<t tx="yen.20170108171733.70">## 使用 iframe 導入影片
-
-### 導入影片 template
-
-&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
-</t>
 <t tx="yen.20170108171733.71"></t>
 <t tx="yen.20170108171733.8">@language xml
 @tabwidth -4
