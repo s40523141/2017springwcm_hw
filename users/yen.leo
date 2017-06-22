@@ -186,7 +186,7 @@
 
 						
 </t>
-<t tx="leo.20170623042439.1"># VirtualBox安裝並且安裝Ubuntu於VirtualBox
+<t tx="leo.20170623042439.1">VirtualBox安裝並且安裝Ubuntu於VirtualBox
 
 &lt;iframe src="https://player.vimeo.com/video/215032549" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20170623042544.1">&lt;section data-markdown&gt;
@@ -198,7 +198,7 @@
 
 						
 </t>
-<t tx="leo.20170623042550.1"># 在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM
+<t tx="leo.20170623042550.1">在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM
 
 &lt;iframe src="https://player.vimeo.com/video/215027413" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="yen.20170108171605.1"></t>
