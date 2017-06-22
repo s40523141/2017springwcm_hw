@@ -36,7 +36,22 @@
 <v t="yen.20170108171733.14" a="E"><vh>封面投影片</vh>
 <v t="yen.20170108171733.15"><vh>封面投影片內容</vh></v>
 </v>
-<v t="yen.20170108171733.16" a="E"><vh>快捷鍵</vh>
+<v t="leo.20170623030855.1" a="E"><vh>網際內容管理</vh>
+<v t="leo.20170623030908.1"><vh>網際內容管理</vh></v>
+</v>
+<v t="leo.20170623031250.1" a="E"><vh>網路線製作</vh>
+<v t="leo.20170623031251.1"><vh>網路線製作</vh></v>
+</v>
+<v t="leo.20170623032306.1" a="E"><vh>建立實體主機</vh>
+<v t="leo.20170623032349.1"><vh>建立實體主機</vh></v>
+</v>
+<v t="leo.20170623031931.1" a="E"><vh>如何設定ipv6網路</vh>
+<v t="leo.20170623032011.1"><vh>如何設定ipv6網路</vh></v>
+</v>
+<v t="leo.20170623032652.1" a="E"><vh>心得</vh>
+<v t="leo.20170623032700.1"><vh>心得</vh></v>
+</v>
+<v t="yen.20170108171733.16"><vh>快捷鍵</vh>
 <v t="yen.20170108171733.17"><vh>投影片快捷鍵</vh></v>
 </v>
 <v t="yen.20170108171733.64"><vh>各式內容引用範例</vh>
@@ -77,6 +92,96 @@
 <v t="yen.20170108171939.1"><vh>@button ipv6 https server</vh></v>
 </vnodes>
 <tnodes>
+<t tx="leo.20170623030855.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170623030908.1"># 網際內容管理
+
+&lt;small&gt;
+* 網際內容管理課程利用 Brython 建立一個能夠直接在瀏覽器中執行的 Python3 程式環境,
+* 讓使用者進行各種與機械產品開發相關的設計運算與動靜態模擬.
+&lt;/small&gt;</t>
+<t tx="leo.20170623031250.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170623031251.1"># 網路線製作
+
+&lt;small&gt;
+* 材料: 8蕊網路線 RJ-45接頭 剪刀 壓線鉗
+* 把網路線的外層塑膠殼剪開 裡面會有8條有顏色的線 將他們整理好並且剪到一樣長
+* 網路線有2種接法
+* 一般傳輸用網路線色對規則 (兩端的網路頭皆為以下接法) 白橙、橙、白綠、藍、白藍、綠、白棕、棕
+* 兩台電腦資料對傳用色對規則 (又稱跳接法、一頭以正常傳輸色對接法、另一頭則為以下接法) 白綠、綠、白橙、藍、白藍、橙、白棕、棕
+&lt;/small&gt;</t>
+<t tx="leo.20170623031931.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170623032011.1"># 如何設定ipv6網路
+
+&lt;small&gt;
+* 連線到IPV6 的網路設定教學
+* 連線到IPV6 的網路設定教學
+* 首先進入網路和共用中心
+* 選擇乙太網路內容
+* 把IPV4打勾按掉 選擇IPV6 然後打勾IPV6 點選內容
+* 把使用下列DNS伺服器網址打勾
+* 慣用DNS伺服器:輸入學校的IPV6 IP
+* 其他DNS伺服器:中華電信的IPV6 IP
+* 設定完後 進入網際網路的設定
+* 點開 Proxy 設定
+* 點選LAN設定
+* 把Proxy伺服器打勾網址用系館的IPV6 連接阜打3128
+* 就能完成IPV6的連線
+&lt;/small&gt;</t>
+<t tx="leo.20170623032306.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170623032349.1"># 建立實體主機
+
+* 拆除廢棄舊電腦剩餘可用的零件
+* 裝在另一台主機上即升級完成</t>
+<t tx="leo.20170623032652.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170623032700.1"># 心得
+
+&lt;small&gt;
+* VirtualBox安裝並且安裝Ubuntu於VirtualBox
+*網路線製作
+* v i 指令說明
+* Ubuntu 16.04 環境下安裝並設定裝Stunnel 與 Fossil SCM
+* 雖然沒有順利照著上課進度發展，但也學到了有關上述的知識，就由更正錯誤來更加了解整個系統的運作方式。
+&lt;/small&gt;</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
