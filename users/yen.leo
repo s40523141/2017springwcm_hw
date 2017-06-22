@@ -39,10 +39,10 @@
 <v t="yen.20170108171733.17"><vh>投影片快捷鍵</vh></v>
 </v>
 </v>
-<v t="leo.20170623042419.1" a="E"><vh>VirtualBox安裝並且安裝Ubuntu於VirtualBox</vh>
+<v t="leo.20170623042419.1"><vh>VirtualBox安裝並且安裝Ubuntu於VirtualBox</vh>
 <v t="leo.20170623042439.1"><vh>VirtualBox安裝並且安裝Ubuntu於VirtualBox影片</vh></v>
 </v>
-<v t="leo.20170623042544.1" a="E"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM</vh>
+<v t="leo.20170623042544.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM</vh>
 <v t="leo.20170623042550.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM影片</vh></v>
 </v>
 <v t="leo.20170623030855.1"><vh>網際內容管理</vh>
@@ -57,7 +57,7 @@
 <v t="leo.20170623031931.1"><vh>如何設定ipv6網路</vh>
 <v t="leo.20170623032011.1"><vh>如何設定ipv6網路內文</vh></v>
 </v>
-<v t="leo.20170623032652.1"><vh>心得</vh>
+<v t="leo.20170623032652.1" a="E"><vh>心得</vh>
 <v t="leo.20170623032700.1"><vh>心得內文</vh></v>
 </v>
 </v>
