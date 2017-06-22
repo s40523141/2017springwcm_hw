@@ -35,23 +35,29 @@
 <v t="yen.20170108171733.13" a="E"><vh>slides div</vh>
 <v t="yen.20170108171733.14" a="E"><vh>封面投影片</vh>
 <v t="yen.20170108171733.15"><vh>封面投影片內容</vh></v>
-</v>
-<v t="yen.20170108171733.16" a="E"><vh>快捷鍵</vh>
+<v t="yen.20170108171733.16"><vh>快捷鍵</vh>
 <v t="yen.20170108171733.17"><vh>投影片快捷鍵</vh></v>
 </v>
-<v t="leo.20170623030855.1" a="E"><vh>網際內容管理</vh>
+</v>
+<v t="leo.20170623042419.1" a="E"><vh>VirtualBox安裝並且安裝Ubuntu於VirtualBox</vh>
+<v t="leo.20170623042439.1"><vh>VirtualBox安裝並且安裝Ubuntu於VirtualBox影片</vh></v>
+</v>
+<v t="leo.20170623042544.1" a="E"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM</vh>
+<v t="leo.20170623042550.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM影片</vh></v>
+</v>
+<v t="leo.20170623030855.1"><vh>網際內容管理</vh>
 <v t="leo.20170623030908.1"><vh>網際內容管理內文</vh></v>
 </v>
-<v t="leo.20170623031250.1" a="E"><vh>網路線製作</vh>
+<v t="leo.20170623031250.1"><vh>網路線製作</vh>
 <v t="leo.20170623031251.1"><vh>網路線製作內文</vh></v>
 </v>
-<v t="leo.20170623032306.1" a="E"><vh>建立實體主機</vh>
+<v t="leo.20170623032306.1"><vh>建立實體主機</vh>
 <v t="leo.20170623032349.1"><vh>建立實體主機內文</vh></v>
 </v>
-<v t="leo.20170623031931.1" a="E"><vh>如何設定ipv6網路</vh>
+<v t="leo.20170623031931.1"><vh>如何設定ipv6網路</vh>
 <v t="leo.20170623032011.1"><vh>如何設定ipv6網路內文</vh></v>
 </v>
-<v t="leo.20170623032652.1" a="E"><vh>心得</vh>
+<v t="leo.20170623032652.1"><vh>心得</vh>
 <v t="leo.20170623032700.1"><vh>心得內文</vh></v>
 </v>
 </v>
@@ -166,11 +172,31 @@
 
 
 * VirtualBox安裝並且安裝Ubuntu於VirtualBox
-*網路線製作
+* 網路線製作
 * v i 指令說明
 * Ubuntu 16.04 環境下安裝並設定裝Stunnel 與 Fossil SCM
 * 雖然沒有順利照著上課進度發展，但也學到了有關上述的知識，就由更正錯誤來更加了解整個系統的運作方式。
 </t>
+<t tx="leo.20170623042419.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170623042439.1">&lt;iframe src="https://player.vimeo.com/video/215032549" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20170623042544.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170623042550.1">&lt;iframe src="https://player.vimeo.com/video/215027413" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/
