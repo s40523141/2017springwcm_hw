@@ -39,8 +39,8 @@
 <v t="yen.20170108171733.17"><vh>投影片快捷鍵</vh></v>
 </v>
 </v>
-<v t="leo.20170623042419.1" a="E"><vh>VirtualBox安裝並且安裝Ubuntu於VirtualBox</vh>
-<v t="leo.20170623042439.1"><vh>VirtualBox安裝並且安裝Ubuntu於VirtualBox影片</vh></v>
+<v t="leo.20170623042419.1" a="E"><vh>VirtualBox安裝並且安裝Ubuntu</vh>
+<v t="leo.20170623042439.1"><vh>VirtualBox安裝並且安裝Ubuntu</vh></v>
 </v>
 <v t="leo.20170623042544.1" a="E"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM</vh>
 <v t="leo.20170623042550.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM影片</vh></v>
@@ -186,7 +186,7 @@
 
 						
 </t>
-<t tx="leo.20170623042439.1">VirtualBox安裝並且安裝Ubuntu於VirtualBox
+<t tx="leo.20170623042439.1">VirtualBox安裝並且安裝Ubuntu
 
 &lt;iframe src="https://player.vimeo.com/video/215032549" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
 <t tx="leo.20170623042544.1">&lt;section data-markdown&gt;
