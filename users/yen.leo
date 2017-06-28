@@ -39,17 +39,21 @@
 <v t="yen.20170108171733.17"><vh>投影片快捷鍵</vh></v>
 </v>
 </v>
-<v t="leo.20170623042419.1" a="E"><vh>VirtualBox安裝並且安裝Ubuntu</vh>
-<v t="leo.20170623042439.1"><vh>VirtualBox安裝並且安裝Ubuntu</vh></v>
-</v>
-<v t="leo.20170623042544.1" a="E"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM</vh>
-<v t="leo.20170623042550.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM影片</vh></v>
-</v>
 <v t="leo.20170623030855.1"><vh>網際內容管理</vh>
 <v t="leo.20170623030908.1"><vh>網際內容管理內文</vh></v>
 </v>
+<v t="leo.20170623042419.1"><vh>VirtualBox安裝並且安裝Ubuntu</vh>
+<v t="leo.20170628210948.1"><vh>VirtualBox安裝並且安裝Ubuntu內文</vh></v>
+<v t="leo.20170623042439.1"><vh>VirtualBox安裝並且安裝Ubuntu</vh></v>
+</v>
+<v t="leo.20170623042544.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM</vh>
+<v t="leo.20170628210459.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM內文1</vh></v>
+<v t="leo.20170628210702.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM內文2</vh></v>
+<v t="leo.20170623042550.1"><vh>在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM影片</vh></v>
+</v>
 <v t="leo.20170623031250.1"><vh>網路線製作</vh>
 <v t="leo.20170623031251.1"><vh>網路線製作內文</vh></v>
+<v t="leo.20170628211125.1"><vh>網路線製作內文影片</vh></v>
 </v>
 <v t="leo.20170623032306.1"><vh>建立實體主機</vh>
 <v t="leo.20170623032349.1"><vh>建立實體主機內文</vh></v>
@@ -57,7 +61,14 @@
 <v t="leo.20170623031931.1"><vh>如何設定ipv6網路</vh>
 <v t="leo.20170623032011.1"><vh>如何設定ipv6網路內文</vh></v>
 </v>
-<v t="leo.20170623032652.1" a="E"><vh>心得</vh>
+<v t="leo.20170628211228.1"><vh>在Ubuntu16.04中安裝nginx及設定網路</vh>
+<v t="leo.20170628211242.1"><vh>在Ubuntu16.04中安裝nginx及設定網路內文</vh></v>
+</v>
+<v t="leo.20170628211600.1"><vh>putty設定</vh>
+<v t="leo.20170628211708.1"><vh>putty設定影片內文</vh></v>
+<v t="leo.20170628211603.1"><vh>putty設定影片</vh></v>
+</v>
+<v t="leo.20170623032652.1"><vh>心得</vh>
 <v t="leo.20170623032700.1"><vh>心得內文</vh></v>
 </v>
 </v>
@@ -201,6 +212,99 @@
 <t tx="leo.20170623042550.1">在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM
 
 &lt;iframe src="https://player.vimeo.com/video/215027413" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20170628210459.1">&lt;small&gt;
+* 練習如何在 Ubuntu 操作系統中, 安裝並設定 Stunnel 後與 Fossil SCM server 結合啟動。
+* 首先，開啟終端機(terminal)。
+* 開始安裝Stunnel 與 Fossil SCM：
+* sudo apt update
+* sudo apt install stunnel4 -y
+* sudo apt install fossil
+* 輸入完畢後，接下來需要更改某些資料夾目錄中的環境變數及做開機啟動設定。
+* sudo vi /etc/environment
+* 其中vi代表進入目錄並更改或設定其內容。
+* 進入後按下o，即進入編寫模式及換到下一行，輸入：
+* HTTPS=on
+* 接著按下esc鍵，輸入:wq，其中w代表編寫(write)、 q代表離開(quit)。
+* sudo vi /etc/default/stunnel4
+* 進入後將ENABLED=0中的"0"改為"1"。
+* 到這裡即完成環境變數以及開機啟動設定。
+&lt;/small&gt;
+</t>
+<t tx="leo.20170628210702.1">&lt;small&gt;
+* 最後我們要設定Stunnel 並執行 fossil http 指令，然後在特定目錄中建立兩個檔案。
+
+* 分別是localhost.key 與 localhost.crt
+
+* 首先，更換目錄：
+
+* cd /etc/stunnel/
+
+* 進入目錄後，即可編輯並建立這兩個我們所需的檔案：
+
+* ls -s
+
+* sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout localhost.key -out localhost.crt
+
+* sudo vi /etc/stunnel/stunnel.conf
+
+* 進入後，將下列資料輸入：
+
+* [https] accept = 此電腦的IPv4ip:443 accept = :::443
+* (此為IPv6，若無需使用可直接跳過不打) 
+* cert = /etc/stunnel/localhost.crt key = /etc/stunnel/localhost.key exec = /usr/bin/fossil execargs = /usr/bin/fossil http /home/user/repository/自己的小組.fossil -- https --nojail
+
+* 其中 --nojail 目的在 drop the root privilege but do not enter the chroot jail
+
+* 最後輸入sudo /etc/init.d/stunnel4 restart後，重新開機虛擬機即可以https: //yourip 連結至 mde2a1.fossil 網際管理介面！
+* 也可以觀看練習影片：
+&lt;/small&gt;</t>
+<t tx="leo.20170628210948.1">&lt;small&gt;
+1.自訂系統名稱
+
+2.類型選擇Linux
+
+3.版本選擇Ubuntu64-bit
+
+4.記憶體大小設定
+
+5.硬碟選擇立即建立虛擬硬碟
+
+6.設定虛擬機要存放的位置、給予虛擬硬碟多少容量
+
+7.硬碟類型選擇VHD，設定好之後即可建立一個虛擬主機
+&lt;/small&gt;</t>
+<t tx="leo.20170628211125.1">&lt;iframe src="https://player.vimeo.com/video/214995409" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20170628211228.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170628211242.1">&lt;small&gt;
+* 上一步驟完成安裝Ubuntu後，再來需要把網路設定好
+* 點擊齒輪後選擇網路，選擇右下角的選項，將自己的網路IP等資料輸入，按下儲存，即可用瀏覽器上網。
+* 接著練習的是安裝nginx軟件。
+* 開啟終端機(terminal)後，輸入：
+* sudo apt install nginx
+* service nginx start
+* 輸入密碼後再從瀏覽器網址輸入http ://localhost/就會出現wellcome to nginx。
+&lt;small&gt;</t>
+<t tx="leo.20170628211600.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20170628211603.1">&lt;iframe src="https://player.vimeo.com/video/223450079" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20170628211708.1">* 首先我們要先開xwindow
+* 打開putty IP 設定要連的主機網路IP SSH --X11--localhost:0
+* proxy 要設IPV4 轉IPV6的跳板不然無法連接至小組主機</t>
 <t tx="yen.20170108171605.1"></t>
 <t tx="yen.20170108171605.2">QTreeWidget {
     /* These apply to the selected item, but not to editing items.*/

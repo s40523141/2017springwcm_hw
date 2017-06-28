@@ -72,6 +72,33 @@ Created by [s40523141](https://github.com/s40523141)
 						
 <section data-markdown>
     <script type="text/template">
+# 網際內容管理
+
+
+* 網際內容管理課程利用 Brython 建立一個能夠直接在瀏覽器中執行的 Python3 程式環境,
+* 讓使用者進行各種與機械產品開發相關的設計運算與動靜態模擬
+    </script>
+</section>
+
+
+						
+<section data-markdown>
+    <script type="text/template">
+<small>
+1.自訂系統名稱
+
+2.類型選擇Linux
+
+3.版本選擇Ubuntu64-bit
+
+4.記憶體大小設定
+
+5.硬碟選擇立即建立虛擬硬碟
+
+6.設定虛擬機要存放的位置、給予虛擬硬碟多少容量
+
+7.硬碟類型選擇VHD，設定好之後即可建立一個虛擬主機
+</small>
 VirtualBox安裝並且安裝Ubuntu
 
 <iframe src="https://player.vimeo.com/video/215032549" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -82,21 +109,54 @@ VirtualBox安裝並且安裝Ubuntu
 						
 <section data-markdown>
     <script type="text/template">
+<small>
+* 練習如何在 Ubuntu 操作系統中, 安裝並設定 Stunnel 後與 Fossil SCM server 結合啟動。
+* 首先，開啟終端機(terminal)。
+* 開始安裝Stunnel 與 Fossil SCM：
+* sudo apt update
+* sudo apt install stunnel4 -y
+* sudo apt install fossil
+* 輸入完畢後，接下來需要更改某些資料夾目錄中的環境變數及做開機啟動設定。
+* sudo vi /etc/environment
+* 其中vi代表進入目錄並更改或設定其內容。
+* 進入後按下o，即進入編寫模式及換到下一行，輸入：
+* HTTPS=on
+* 接著按下esc鍵，輸入:wq，其中w代表編寫(write)、 q代表離開(quit)。
+* sudo vi /etc/default/stunnel4
+* 進入後將ENABLED=0中的"0"改為"1"。
+* 到這裡即完成環境變數以及開機啟動設定。
+</small>
+<small>
+* 最後我們要設定Stunnel 並執行 fossil http 指令，然後在特定目錄中建立兩個檔案。
+
+* 分別是localhost.key 與 localhost.crt
+
+* 首先，更換目錄：
+
+* cd /etc/stunnel/
+
+* 進入目錄後，即可編輯並建立這兩個我們所需的檔案：
+
+* ls -s
+
+* sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout localhost.key -out localhost.crt
+
+* sudo vi /etc/stunnel/stunnel.conf
+
+* 進入後，將下列資料輸入：
+
+* [https] accept = 此電腦的IPv4ip:443 accept = :::443
+* (此為IPv6，若無需使用可直接跳過不打) 
+* cert = /etc/stunnel/localhost.crt key = /etc/stunnel/localhost.key exec = /usr/bin/fossil execargs = /usr/bin/fossil http /home/user/repository/自己的小組.fossil -- https --nojail
+
+* 其中 --nojail 目的在 drop the root privilege but do not enter the chroot jail
+
+* 最後輸入sudo /etc/init.d/stunnel4 restart後，重新開機虛擬機即可以https: //yourip 連結至 mde2a1.fossil 網際管理介面！
+* 也可以觀看練習影片：
+</small>
 在Ubuntu 16.04 環境下啟動 Stunnel 與 Fossil SCM
 
 <iframe src="https://player.vimeo.com/video/215027413" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-    </script>
-</section>
-
-
-						
-<section data-markdown>
-    <script type="text/template">
-# 網際內容管理
-
-
-* 網際內容管理課程利用 Brython 建立一個能夠直接在瀏覽器中執行的 Python3 程式環境,
-* 讓使用者進行各種與機械產品開發相關的設計運算與動靜態模擬
     </script>
 </section>
 
@@ -112,6 +172,7 @@ VirtualBox安裝並且安裝Ubuntu
 * 網路線有2種接法
 * 一般傳輸用網路線色對規則 (兩端的網路頭皆為以下接法) 白橙、橙、白綠、藍、白藍、綠、白棕、棕
 * 兩台電腦資料對傳用色對規則 (又稱跳接法、一頭以正常傳輸色對接法、另一頭則為以下接法) 白綠、綠、白橙、藍、白藍、橙、白棕、棕
+<iframe src="https://player.vimeo.com/video/214995409" width="640" height="1138" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </script>
 </section>
 
@@ -146,6 +207,33 @@ VirtualBox安裝並且安裝Ubuntu
 * 點選LAN設定
 * 把Proxy伺服器打勾網址用系館的IPV6 連接阜打3128
 * 就能完成IPV6的連線
+    </script>
+</section>
+
+
+						
+<section data-markdown>
+    <script type="text/template">
+<small>
+* 上一步驟完成安裝Ubuntu後，再來需要把網路設定好
+* 點擊齒輪後選擇網路，選擇右下角的選項，將自己的網路IP等資料輸入，按下儲存，即可用瀏覽器上網。
+* 接著練習的是安裝nginx軟件。
+* 開啟終端機(terminal)後，輸入：
+* sudo apt install nginx
+* service nginx start
+* 輸入密碼後再從瀏覽器網址輸入http ://localhost/就會出現wellcome to nginx。
+<small>
+    </script>
+</section>
+
+
+						
+<section data-markdown>
+    <script type="text/template">
+* 首先我們要先開xwindow
+* 打開putty IP 設定要連的主機網路IP SSH --X11--localhost:0
+* proxy 要設IPV4 轉IPV6的跳板不然無法連接至小組主機
+<iframe src="https://player.vimeo.com/video/223450079" width="640" height="480" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </script>
 </section>
 
